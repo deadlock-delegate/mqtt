@@ -15,6 +15,7 @@ If you have any feature requests don't forget to open an Issue.
 #### For development:
 
 You can run a development MQTT broker with this command if you have Docker installed:
+
 `docker run -it -p 1883:1883 -p 9001:9001 eclipse-mosquitto`
 
 ```bash
