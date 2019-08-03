@@ -1,0 +1,43 @@
+{
+  "name": "@deadlock-delegate/mqtt",
+  "version": "0.5.0",
+  "description": "MQTT plugin for Ark Ecosystem",
+  "author": "roks0n",
+  "license": "MIT",
+  "keywords": [
+    "blockchain",
+    "ark",
+    "arkecosystem",
+    "plugin",
+    "crypto",
+    "dpos",
+    "mqtt",
+    "broadcaster"
+  ],
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deadlock-delegate/mqtt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/deadlock-delegate/mqtt/issues"
+  },
+  "homepage": "https://github.com/deadlock-delegate/mqtt",
+  "scripts": {
+    "test": "ARK_ENV=test jest --runInBand --forceExit",
+    "lint": "eslint ./ --fix"
+  },
+  "dependencies": {
+    "@arkecosystem/core-container": "^2.5.14",
+    "mqtt": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "standard": "^13.1.0"
+  }
+}
