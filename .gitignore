@@ -69,12 +69,11 @@ typings/
 # vuepress build output
 .vuepress/dist
 
+# build output
+dist
+
 # Serverless directories
 .serverless
 
 # Mac OSX
 .DS_Store
-
-
-# Other
-yarn.lock

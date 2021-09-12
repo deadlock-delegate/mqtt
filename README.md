@@ -18,7 +18,7 @@ to support development new plugins and tools for Ark's Ecosystem and maintenance
 
 #### For production:
 
-`yarn global add @deadlock-delegate/mqtt`
+todo
 
 #### For development:
 
@@ -26,37 +26,19 @@ You can run a development MQTT broker with this command if you have Docker insta
 
 `docker run -it -p 1883:1883 -p 9001:9001 eclipse-mosquitto`
 
-```bash
-cd ~/ark-core/plugins
-git clone https://github.com/deadlock-delegate/mqtt
-cd .. && yarn setup
-```
+todo
 
 ### Registration & configuration
 
-Open `~/.config/ark-core/{mainnet|devnet|testnet}/plugins.js` and add `'@deadlock/mqtt": {},` to
-the bottom of the config.
+todo
 
-like so:
-
-```js
-module.exports = {
-    ...
-    "@arkecosystem/core-snapshots": {},
-    "@deadlock-delegate/mqtt": {
-        enabled: true,  // default is false, to set it to true if you wish to enable the plugin
-        events: ['block.forged', 'block.applied', 'transaction.applied'],  // events you wish to subscribe to
-        topic: 'ark/events',  // the topic you wish to publish messages to
-        mqttBroker: 'mqtt://localhost:1883'  // location of your MQTT broker
-    }
-}
-```
 
 ## Credits
 
 - [roks0n](https://github.com/roks0n)
+- [console](https://github.com/c0nsol3)
 - [All Contributors](../../contributors)
 
 ## License
 
-[MIT](LICENSE) © roks0n
+[MIT](LICENSE) © deadlock delegate
