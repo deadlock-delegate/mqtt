@@ -7,7 +7,7 @@ export class ServiceProvider extends Providers.ServiceProvider {
     @Container.inject(Container.Identifiers.LogService)
     private readonly logger!: Contracts.Kernel.Logger;
 
-    private service = Symbol.for("Service<Client>");
+    private service = Symbol.for("MQTT<Client>");
 
     public async register(): Promise<void> {
         this.logger.info("[deadlock-delegate/mqtt] Registering plugin");
@@ -20,9 +20,9 @@ export class ServiceProvider extends Providers.ServiceProvider {
         this.logger.info("[deadlock-delegate/mqtt] Plugin started");
     }
 
-    public async bootWhen(): Promise<boolean> {
+    public async bootWhen(serviceProvider?: string): Promise<boolean> {
         // TODO: make sure plugin is started after the correct state is initialized
-        return !!this.config().get("enabled");
+        return !!this.config().get("enabled") && serviceProvider === "@arkecosystem/core-blockchain";
     }
 
     public async dispose(): Promise<void> {

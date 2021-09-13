@@ -12,26 +12,43 @@ If you find this or other plugins useful please consider
 - voting for `deadlock` delegate
 - donating to `AWtgFYbvtLDYccJvC5MChk4dpiUy2Krt2U`
 
-to support development new plugins and tools for Ark's Ecosystem and maintenance of existing ones. Full list of contributions can be found on [https://arkdelegatesio/delegate/deadlock/](https://arkdelegates.io/delegate/deadlock/contributions/). 🖖
+to support development new plugins and tools for Ark's Ecosystem and maintenance of existing ones. Full list of contributions can be found on [https://arkdelegates.live/delegate/deadlock/](https://arkdelegates.live/delegate/deadlock/contributions/). 🖖
 
 ## Installation
 
-#### For production:
+### Adding plugin to config
 
-todo
+Before restarting your core service, you need to add the plugin into the `core.plugins` or `core.relay` section of `app.json` file:
 
-#### For development:
+```json
+{
+    "package": "@deadlock-delegate/mqtt",
+    "options": {
+        "enabled": true,
+        "events": ["block.forged"],
+        "topic": "ark/events",
+        "mqttBroker": "mqtt://localhost:1883"
+    }
+}
+```
 
-You can run a development MQTT broker with this command if you have Docker installed:
+### For production (eg. devnet/mainnet):
 
-`docker run -it -p 1883:1883 -p 9001:9001 eclipse-mosquitto`
+1. Install plugin: `yarn global add https://github.com/deadlock-delegate/mqtt`
+2. Add plugin to `app.json`
+3. Start your node as you usually start it 
 
-todo
+### For development (eg. testnet):
 
-### Registration & configuration
+You can run a development MQTT broker by navigating to `etc/` directory in this project a run `docker-compose up`. This will start a MQTT broker in docker.
 
-todo
+Assuming you don't run testnet locally via docker:
 
+1. Clone this plugin into `plugins/` directory of the [core](https://github.com/ArkEcosystem/core/) project
+2. Add plugin to `app.json`, for testnet the file can be found in: `core/packages/core/bin/config/testnet/app.json`
+3. Go into the plugin's directory: `cd mqtt`
+4. Build plugin: `yarn build`
+5. Run `yarn full:testnet` inside `core/packages/core` directory to start testnet with mqtt plugin
 
 ## Credits
 

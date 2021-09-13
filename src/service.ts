@@ -87,6 +87,7 @@ export default class Service {
         this.emitter.listen(name, {
             handle: async (payload: any) => {
                 const { name, data } = payload;
+                this.logger.debug(`[deadlock-delegate/mqtt] Sending "${name}"" to "${this.topic}" topic"`);
                 this.client.publish(this.topic, JSON.stringify({ event: name, data }));
             },
         });
