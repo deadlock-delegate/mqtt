@@ -22,7 +22,7 @@ export class ServiceProvider extends Providers.ServiceProvider {
 
     public async bootWhen(serviceProvider?: string): Promise<boolean> {
         // TODO: make sure plugin is started after the correct state is initialized
-        return !!this.config().get("enabled") && serviceProvider === "@arkecosystem/core-blockchain";
+        return !!this.config().get("enabled"); // && serviceProvider === "@arkecosystem/core-blockchain";
     }
 
     public async dispose(): Promise<void> {
