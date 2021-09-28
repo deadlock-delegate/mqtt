@@ -29,7 +29,7 @@
     "clean": "del dist"
   },
   "dependencies": {
-    "@arkecosystem/core-kernel": "3.0.0-next.35",
+    "@arkecosystem/core-kernel": "^3.0.0",
     "mqtt": "^4.2.8"
   }
 }
