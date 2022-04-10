@@ -1,16 +1,13 @@
 {
   "name": "@deadlock-delegate/mqtt",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "MQTT plugin for core",
   "author": "deadlock",
   "license": "MIT",
   "keywords": [
     "blockchain",
     "ark",
-    "arkecosystem",
-    "plugin",
-    "crypto",
-    "dpos",
+    "solar",
     "mqtt",
     "broadcaster"
   ],
@@ -28,8 +25,9 @@
     "build": "yarn clean && yarn compile",
     "clean": "del dist"
   },
+  "devDependencies": {},
   "dependencies": {
-    "@arkecosystem/core-kernel": "^3.0.0",
-    "mqtt": "^4.2.8"
+    "@arkecosystem/core-kernel": "^3.2.0 || ^4.0.0-next.9",
+    "mqtt": "^4.3.7"
   }
 }

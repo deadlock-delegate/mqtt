@@ -7,12 +7,7 @@ to run a separate MQTT broker.
 If you have any feature requests don't forget to open an Issue.
 
 #### ❤️ Support maintenance and development of plugins
-If you find this or other plugins useful please consider
-
-- voting for `deadlock` delegate
-- donating to `AWtgFYbvtLDYccJvC5MChk4dpiUy2Krt2U`
-
-to support development new plugins and tools for Ark's Ecosystem and maintenance of existing ones. Full list of contributions can be found on [https://arkdelegates.live/delegate/deadlock/](https://arkdelegates.live/delegate/deadlock/contributions/). 🖖
+If you find this or other plugins useful please consider voting for `deadlock` delegate on Solar or Ark networks.
 
 ## Installation
 
@@ -34,7 +29,7 @@ Before restarting your process, you need to add the plugin into the very end  `c
 
 ### For production (eg. devnet/mainnet):
 
-1. Install plugin: `ark plugin:install @deadlock-delegate/mqtt`
+1. Install plugin: `<command> plugin:install @deadlock-delegate/notifier`, eg: `ark plugin:install @deadlock-delegate/notifier` or `solar plugin:install @deadlock-delegate/notifier`
 2. Add plugin to `app.json`
 3. Start your node as you usually start it 
 
@@ -44,7 +39,7 @@ You can run a development MQTT broker by navigating to `etc/` directory in this 
 
 Assuming you don't run testnet locally via docker:
 
-1. Clone this plugin into `plugins/` directory of the [core](https://github.com/ArkEcosystem/core/) project
+1. Clone this plugin into `plugins/` directory of the `core` project
 2. Add plugin to `app.json`, for testnet the file can be found in: `core/packages/core/bin/config/testnet/app.json`
 3. Go into the plugin's directory: `cd mqtt`
 4. Build plugin: `yarn build`
