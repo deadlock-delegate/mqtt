@@ -29,7 +29,7 @@ Before restarting your process, you need to add the plugin into the very end  `c
 
 ### For production (eg. devnet/mainnet):
 
-1. Install plugin: `<command> plugin:install @deadlock-delegate/notifier`, eg: `ark plugin:install @deadlock-delegate/notifier` or `solar plugin:install @deadlock-delegate/notifier`
+1. Install plugin: `<command> plugin:install @deadlock-delegate/mqtt`, eg: `ark plugin:install @deadlock-delegate/mqtt` or `solar plugin:install @deadlock-delegate/mqtt`
 2. Add plugin to `app.json`
 3. Start your node as you usually start it 
 
