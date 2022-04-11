@@ -19,6 +19,7 @@ const VALID_EVENTS = [
     "peer.removed",
     "round.applied",
     "round.created",
+    "round.missed",
     "state.started",
     "transaction.applied",
     "transaction.expired",

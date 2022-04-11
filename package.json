@@ -1,6 +1,6 @@
 {
   "name": "@deadlock-delegate/mqtt",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "MQTT plugin for core",
   "author": "deadlock",
   "license": "MIT",
