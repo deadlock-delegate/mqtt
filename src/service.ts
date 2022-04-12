@@ -4,34 +4,6 @@ import { Client as MQTTClient } from "mqtt/types";
 
 import { IOptions } from "./interface";
 
-const VALID_EVENTS = [
-    "block.applied",
-    "block.disregarded",
-    "block.forged",
-    "block.received",
-    "block.reverted",
-    "delegate.registered",
-    "delegate.resigned",
-    "forger.failed",
-    "forger.missing",
-    "forger.started",
-    "peer.added",
-    "peer.removed",
-    "round.applied",
-    "round.created",
-    "round.missed",
-    "state.started",
-    "transaction.applied",
-    "transaction.expired",
-    "transaction.forged",
-    "transaction.pool.added",
-    "transaction.pool.rejected",
-    "transaction.pool.removed",
-    "transaction.reverted",
-    "wallet.created.cold",
-    "wallet.saved",
-];
-
 @Container.injectable()
 export default class Service {
     @Container.inject(Container.Identifiers.EventDispatcherService)
@@ -70,11 +42,6 @@ export default class Service {
     private createSubscriptions() {
         const subscribedToEvent: string[] = [];
         for (const event of this.events) {
-            if (!VALID_EVENTS.includes(event)) {
-                this.logger.warning(`[deadlock-delegate/mqtt] ${event} is not a valid event!`);
-                continue;
-            }
-
             if (subscribedToEvent.includes(event)) {
                 continue;
             }
